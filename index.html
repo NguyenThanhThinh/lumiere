@@ -1,643 +1,778 @@
 <!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mycospring | Nấm cho cuộc sống - Tinh chất nấm dược liệu</title>
 
-<html dir="ltr" lang="vi"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Mycospring | Nấm cho cuộc sống - Tinh chất nấm dược liệu</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "primary-fixed": "#ece0d8",
-                        "secondary-fixed-dim": "#c9c6c2",
-                        "secondary-container": "#e5e2dd",
-                        "inverse-on-surface": "#f8efe6",
-                        "clay-muted": "#A67B5B",
-                        "on-tertiary": "#ffffff",
-                        "surface-container": "#f5ece4",
-                        "surface-container-low": "#fbf2e9",
-                        "inverse-primary": "#d0c4bd",
-                        "on-secondary-fixed-variant": "#474743",
-                        "on-tertiary-fixed-variant": "#454b00",
-                        "primary-container": "#2c2621",
-                        "on-primary-fixed": "#201b16",
-                        "surface-container-lowest": "#ffffff",
-                        "on-error": "#ffffff",
-                        "error": "#ba1a1a",
-                        "on-secondary-fixed": "#1c1c19",
-                        "on-background": "#1f1b16",
-                        "on-surface-variant": "#4d4540",
-                        "on-error-container": "#93000a",
-                        "tertiary-fixed-dim": "#c3cf47",
-                        "surface-container-highest": "#eae1d8",
-                        "forest-deep": "#3E4437",
-                        "on-primary-fixed-variant": "#4d4540",
-                        "on-primary-container": "#968c86",
-                        "surface": "#fff8f3",
-                        "outline-variant": "#d0c4bd",
-                        "primary-fixed-dim": "#d0c4bd",
-                        "surface-tint": "#655d57",
-                        "inverse-surface": "#34302a",
-                        "surface-bright": "#fff8f3",
-                        "background": "#fff8f3",
-                        "surface-variant": "#eae1d8",
-                        "surface-container-high": "#f0e7de",
-                        "primary": "#17120d",
-                        "on-tertiary-fixed": "#1b1d00",
-                        "on-secondary-container": "#656461",
-                        "tertiary-container": "#262a00",
-                        "on-primary": "#ffffff",
-                        "on-surface": "#1f1b16",
-                        "cream-dark": "#EBE7E0",
-                        "on-secondary": "#ffffff",
-                        "surface-dim": "#e1d9d0",
-                        "secondary": "#5f5e5b",
-                        "error-container": "#ffdad6",
-                        "outline": "#7e756f",
-                        "secondary-fixed": "#e5e2dd",
-                        "on-tertiary-container": "#8b9605",
-                        "tertiary-fixed": "#dfec60",
-                        "tertiary": "#121400"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "1rem",
-                        "lg": "2rem",
-                        "xl": "3rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "md": "24px",
-                        "xl": "80px",
-                        "base": "8px",
-                        "margin-mobile": "16px",
-                        "lg": "48px",
-                        "container-max": "1280px",
-                        "xs": "4px",
-                        "sm": "12px",
-                        "gutter": "24px"
-                    },
-                    "fontFamily": {
-                        "body-md": ["Montserrat", "sans-serif"],
-                        "body-lg": ["Montserrat", "sans-serif"],
-                        "headline-lg-mobile": ["EB Garamond", "serif"],
-                        "button-text": ["Montserrat", "sans-serif"],
-                        "headline-lg": ["EB Garamond", "serif"],
-                        "headline-md": ["EB Garamond", "serif"],
-                        "label-caps": ["Montserrat", "sans-serif"],
-                        "display-lg": ["EB Garamond", "serif"]
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        body { font-family: 'Montserrat', sans-serif; overflow-x: hidden; }
-        h1, h2, h3 { font-family: 'EB Garamond', serif; font-weight: 400; letter-spacing: -0.01em; }
-        
-        .premium-shadow { box-shadow: 0 20px 40px -10px rgba(23, 18, 13, 0.08); transition: box-shadow 0.5s ease; }
-        .premium-shadow:hover { box-shadow: 0 30px 60px -12px rgba(23, 18, 13, 0.12); }
-        
-        .reveal-element { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
-        .reveal-element.active { opacity: 1; transform: translateY(0); }
-        
-        @keyframes kenburns {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.15); }
-        }
-        .ken-burns { animation: kenburns 20s ease-in-out infinite alternate; }
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
-        .slide-up-fade { animation: slideUpFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(30px); }
-        @keyframes slideUpFade {
-            to { opacity: 1; transform: translateY(0); }
-        }
+  <!-- Google Fonts: Open Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
 
-        #mobile-menu-overlay { transition: opacity 0.4s ease, visibility 0.4s ease; }
-        #mobile-menu-content { transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        
-        .hover-lift { transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; }
-        .hover-lift:hover { transform: translateY(-6px); }
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
 
-        .sticky-nav-scrolled { background-color: rgba(255, 248, 243, 0.95) !important; padding-top: 0.75rem !important; padding-bottom: 0.75rem !important; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-        
-        .scroll-indicator { animation: bounce 2s infinite; }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-
-        /* Adjusted Fluid Typography for H1 - more refined */
-        .fluid-h1 {
-            font-size: clamp(2rem, 6vw + 0.5rem, 6.5rem);
-            line-height: 1.05;
-            word-break: break-word;
-            hyphens: auto;
-        }
-
-        #back-to-top {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-        #back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
-</head>
-<body class="bg-background text-on-surface">
-<!-- Promo Banner -->
-<div class="bg-primary text-on-primary py-2.5 text-center text-[10px] font-bold tracking-[0.25em] uppercase z-[60] relative">
-    MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC CHO ĐƠN HÀNG TRÊN 1.500.000 VNĐ
-</div>
-<!-- Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-transparent transition-all duration-500 mt-10 md:mt-12" id="main-nav">
-<div class="max-w-container-max mx-auto px-6 md:px-lg py-5 flex justify-between items-center">
-<!-- Mobile Menu Trigger -->
-<button class="md:hidden text-primary focus:outline-none" id="mobile-menu-open">
-<span class="material-symbols-outlined">menu</span>
-</button>
-<!-- Nav Links (Desktop) -->
-<div class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.2em]">
-<a class="text-primary hover:opacity-60 transition-opacity" href="#products">Cửa hàng</a>
-<a class="text-primary hover:opacity-60 transition-opacity" href="#benefits">Về loài nấm</a>
-<a class="text-primary hover:opacity-60 transition-opacity" href="#commitment">Câu chuyện</a>
-<a class="text-primary hover:opacity-60 transition-opacity" href="#commitment">Nghiên cứu</a>
-</div>
-<!-- Logo -->
-<div class="absolute left-1/2 -translate-x-1/2">
-<a href="#">
-<img alt="Mycospring Logo" class="h-5 md:h-7 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ugvSdJPHUisrZQ13wPfiHijHoD9w80XSrQSdGlegMqluEEIjVsfmxOSYe90QVEnd8rWD1XzgQvSXdxAhcSc0tAYOOp24E9ShlKRjrN0GjScILIV-iCjvXlkDlLXAdNs_DLKt9mOoOiJxtwVIvLbf0aP0qthFOmJ_q1DquNqnWFYbn8Uc2acMcXlghRporwaAgb46F5m_g9HQGwcPUud9EVmYRHpia3Ww_rVflvUtJOz_VAfi_2U3iLKUEs"/>
-</a>
-</div>
-<!-- Icons -->
-<div class="flex items-center gap-6">
-<button class="text-primary hover:opacity-60 transition-opacity hidden md:block">
-<span class="material-symbols-outlined">search</span>
-</button>
-<button class="text-primary hover:opacity-60 transition-opacity relative">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute -top-1.5 -right-1.5 bg-tertiary-fixed text-primary text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">0</span>
-</button>
-</div>
-</div>
-</nav>
-<!-- Mobile Menu Sidebar -->
-<div class="fixed inset-0 z-[70] invisible opacity-0" id="mobile-menu-overlay">
-<div class="absolute inset-0 bg-primary/40 backdrop-blur-md" id="mobile-menu-close-area"></div>
-<div class="absolute top-0 left-0 bottom-0 w-[85%] max-w-sm bg-background shadow-2xl -translate-x-full" id="mobile-menu-content">
-<div class="flex flex-col h-full p-10">
-<div class="flex justify-between items-center mb-16">
-<img alt="Logo" class="h-6" src="https://lh3.googleusercontent.com/aida/ADBb0ugvSdJPHUisrZQ13wPfiHijHoD9w80XSrQSdGlegMqluEEIjVsfmxOSYe90QVEnd8rWD1XzgQvSXdxAhcSc0tAYOOp24E9ShlKRjrN0GjScILIV-iCjvXlkDlLXAdNs_DLKt9mOoOiJxtwVIvLbf0aP0qthFOmJ_q1DquNqnWFYbn8Uc2acMcXlghRporwaAgb46F5m_g9HQGwcPUud9EVmYRHpia3Ww_rVflvUtJOz_VAfi_2U3iLKUEs"/>
-<button class="text-primary" id="mobile-menu-close">
-<span class="material-symbols-outlined">close</span>
-</button>
-</div>
-<nav class="flex flex-col gap-10 text-2xl font-medium font-headline-md">
-<a class="hover:text-clay-muted transition-colors mobile-link" href="#products">Cửa hàng</a>
-<a class="hover:text-clay-muted transition-colors mobile-link" href="#benefits">Về loài nấm</a>
-<a class="hover:text-clay-muted transition-colors mobile-link" href="#commitment">Câu chuyện</a>
-<a class="hover:text-clay-muted transition-colors mobile-link" href="#commitment">Nghiên cứu</a>
-</nav>
-<div class="mt-auto pt-12 border-t border-primary/10 space-y-8">
-<p class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Tài khoản</p>
-<button class="bg-primary text-on-primary px-8 py-4 rounded-full text-xs font-bold w-full uppercase tracking-widest hover-lift">Đăng nhập</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Hero Section -->
-<section class="relative h-screen flex items-center justify-center overflow-hidden bg-primary" id="hero">
-<div class="absolute inset-0 z-0">
-<img alt="Hero background" class="w-full h-full object-cover ken-burns opacity-60" src="https://lh3.googleusercontent.com/aida/ADBb0ugb6E-DFcem3ZH1Y-2Q-7mOaUeRTScbsTtdcarR1WdbyC1YnLgFQGPahjEBwyfEPzo3b1F5As27YNhQT-SelOpAf2cLrQk3ZC5vKou0mWeQMnV7VQNwqI8sOVP06KDzDMx5Lx-T9XFZAeaj5p5mOh4ZMjLgdyGU-HYMUoLSUChSe7HvagEy-VVCZRjmEo05FfwuN-bRm5Tb4VF9vzS3wssIW-wVXGnz-VuF-y9rJhOJNb8KGHOQptKf5pA"/>
-<div class="absolute inset-0 bg-gradient-to-b from-primary/40 via-transparent to-primary/60"></div>
-</div>
-<div class="relative z-10 max-w-7xl px-gutter text-center text-white">
-<h1 class="fluid-h1 mb-8 slide-up-fade" style="animation-delay: 0.2s">
-            Nấm cho <br/><span class="italic font-light text-primary-fixed">cuộc sống</span>.
-        </h1>
-<p class="text-base md:text-xl font-light max-w-xl mx-auto opacity-90 leading-relaxed slide-up-fade mb-10" style="animation-delay: 0.5s">
-            Thói quen dựa trên nấm dược liệu có thể thay đổi cách bạn ngủ, hoạt động và cảm nhận mỗi ngày.
-        </p>
-<div class="flex flex-col items-center gap-8 slide-up-fade" style="animation-delay: 0.8s">
-<a class="bg-tertiary-fixed text-primary px-14 py-6 rounded-full text-xs font-bold uppercase tracking-[0.3em] hover:bg-white hover-lift inline-block" href="#products">
-                BẮT ĐẦU NGAY
-            </a>
-<div class="scroll-indicator">
-<span class="material-symbols-outlined text-white/50 text-3xl">expand_more</span>
-</div>
-</div>
-</div>
-</section>
-<!-- How to use -->
-<section class="py-xl bg-background border-b border-primary/5" id="how-to">
-<div class="max-w-container-max mx-auto px-6 reveal-element">
-<div class="text-center mb-20">
-<span class="text-[10px] font-bold uppercase tracking-[0.4em] text-clay-muted mb-4 block">Quy trình đơn giản</span>
-<h2 class="text-3xl md:text-5xl mb-6">Cách sử dụng</h2>
-<div class="w-16 h-0.5 bg-tertiary-fixed mx-auto"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
-<div class="text-center group">
-<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-tertiary-fixed transition-colors duration-500">
-<span class="material-symbols-outlined text-3xl text-primary">coffee</span>
-</div>
-<h3 class="text-xl mb-4 uppercase tracking-tighter font-semibold">1. Pha trộn</h3>
-<p class="text-on-surface-variant font-light leading-relaxed px-4 text-sm">Thêm 1-2 giọt tinh chất vào cà phê, trà hoặc sinh tố yêu thích của bạn.</p>
-</div>
-<div class="text-center group">
-<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-tertiary-fixed transition-colors duration-500">
-<span class="material-symbols-outlined text-3xl text-primary">reorder</span>
-</div>
-<h3 class="text-xl mb-4 uppercase tracking-tighter font-semibold">2. Khuấy đều</h3>
-<p class="text-on-surface-variant font-light leading-relaxed px-4 text-sm">Khuấy tan tinh chất nấm dược liệu để các hoạt chất hòa quyện hoàn hảo.</p>
-</div>
-<div class="text-center group">
-<div class="w-20 h-20 bg-surface-container rounded-full flex items-center justify-center mx-auto mb-8 group-hover:bg-tertiary-fixed transition-colors duration-500">
-<span class="material-symbols-outlined text-3xl text-primary">energy_savings_leaf</span>
-</div>
-<h3 class="text-xl mb-4 uppercase tracking-tighter font-semibold">3. Thưởng thức</h3>
-<p class="text-on-surface-variant font-light leading-relaxed px-4 text-sm">Cảm nhận nguồn năng lượng tự nhiên và sự minh mẫn lan tỏa khắp cơ thể.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Natural Benefits (Rich Content) -->
-<section class="bg-surface-container-low overflow-hidden" id="benefits">
-<!-- Benefit 1 -->
-<div class="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh] items-center">
-<div class="p-12 md:p-20 space-y-8 reveal-element">
-<span class="text-[10px] font-bold uppercase tracking-[0.4em] text-clay-muted">Tập trung &amp; Tinh anh</span>
-<h2 class="text-4xl md:text-5xl leading-tight">Nấm Bờm Sư Tử (Hericium)</h2>
-<p class="text-lg text-on-surface-variant font-light leading-relaxed">
-                Được mệnh danh là "Nấm Thông Minh", Hericium hỗ trợ tối ưu cho sức khỏe não bộ, tăng cường trí nhớ và khả năng tập trung cao độ cho công việc sáng tạo.
-            </p>
-<div class="flex gap-4">
-<button class="border-b-2 border-primary pb-1 text-[10px] font-bold uppercase tracking-widest hover:text-clay-muted transition-colors">Khám phá chi tiết</button>
-</div>
-</div>
-<div class="h-full min-h-[400px]">
-<img alt="Hericium Focus" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugezCilZxaIAIXo7WJTXDwOrbAGYly26vAn2Q7W98S6IJM4tY4AcVxfTuGZ-k9U0BEVd5r2lshe6qsDVz3rSf8MQzVjc7An3A04BN5Ml5JTaXj163Y5j9gidFgtFlBBm8G7X1DJ_PIQQVkl6n19q3F3NG47L-wX-mwqYx-tmXHBMGthtNgZD8jLXPMaUo7VIbv3MD-5_HqUZJbm8m1YNEk00mQHNMJ7GtcDczs9mkM-5WyC37XEoSx5bFk"/>
-</div>
-</div>
-<!-- Benefit 2 -->
-<div class="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh] items-center">
-<div class="h-full min-h-[400px] order-2 lg:order-1">
-<img alt="Cordyceps Energy" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujMTS-CSuzkUY8jIEQZVT82XqEO7s7w9H5oAug8DUVlTaedTf2obbRyMD2e_mH3tPBzXG2desZAJ_n7sBER2GGguePHj79yJwLe3JSf8wC98soNvR_fInxjvAlFiDmmdST_2izaHB50qGDuim4kVy3PmiPqcoi5z-eYGbLFzZjl2XuD68o00xK7E9NUN6FX2EoH6JEpfdxuyuRvZCpj1zkxJOwZ4y4BjLNV3PLhnu9L4_vEcEoB0xg2Ww"/>
-</div>
-<div class="p-12 md:p-20 space-y-8 order-1 lg:order-2 reveal-element">
-<span class="text-[10px] font-bold uppercase tracking-[0.4em] text-clay-muted">Năng lượng bền bỉ</span>
-<h2 class="text-4xl md:text-5xl leading-tight">Đông Trùng Hạ Thảo (Cordyceps)</h2>
-<p class="text-lg text-on-surface-variant font-light leading-relaxed">
-                Tăng cường hiệu suất vận động và sức bền tự nhiên. Cordyceps giúp cơ thể tối ưu hóa việc sử dụng oxy, mang lại nguồn năng lượng sạch mà không gây hồi hộp.
-            </p>
-<div class="flex gap-4">
-<button class="border-b-2 border-primary pb-1 text-[10px] font-bold uppercase tracking-widest hover:text-clay-muted transition-colors">Khám phá chi tiết</button>
-</div>
-</div>
-</div>
-<!-- Benefit 3 -->
-<div class="grid grid-cols-1 lg:grid-cols-2 min-h-[70vh] items-center">
-<div class="p-12 md:p-20 space-y-8 reveal-element">
-<span class="text-[10px] font-bold uppercase tracking-[0.4em] text-clay-muted">Thư giãn &amp; Phục hồi</span>
-<h2 class="text-4xl md:text-5xl leading-tight">Nấm Linh Chi (Reishi)</h2>
-<p class="text-lg text-on-surface-variant font-light leading-relaxed">
-                "Vua của các loài thảo mộc", Linh Chi giúp cân bằng tâm trí, hỗ trợ giấc ngủ sâu và tăng cường hệ thống miễn dịch tự nhiên của bạn.
-            </p>
-<div class="flex gap-4">
-<button class="border-b-2 border-primary pb-1 text-[10px] font-bold uppercase tracking-widest hover:text-clay-muted transition-colors">Khám phá chi tiết</button>
-</div>
-</div>
-<div class="h-full min-h-[400px]">
-<img alt="Reishi Calm" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhUjMujnTXBLbGdWqFuzijSytvMU-dYx1CTJT-uZlPLlpB81xP-tq-Ku71khx3Nn1myFLCzFlpMx-V2oYQZ3LFKyC8aBCqfKiVsTBkIdizf1QwSAXOhfq0GZEunI7ZN4vt5OH7X3VQw9NSaEeVhTVxHS9qlkNMLrdbifmRTxCcgcepJE-RCB55upRMlt5OioKbh7VsbzvAwpHrZNUmKepcfSDTnzUWwQUnKDWxzZC_CfpztrzPD6nL7I10"/>
-</div>
-</div>
-</section>
-<!-- Product Grid -->
-<section class="py-xl bg-background" id="products">
-<div class="max-w-container-max mx-auto px-6">
-<div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4 reveal-element">
-<h2 class="text-4xl md:text-6xl tracking-tighter">Chọn nấm của bạn</h2>
-<a class="text-[10px] font-bold uppercase tracking-[0.3em] border-b border-primary pb-1 hover:text-clay-muted hover:border-clay-muted transition-all" href="#">Xem bộ sưu tập đầy đủ</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-<!-- Product 1 -->
-<div class="group cursor-pointer reveal-element">
-<div class="aspect-[4/5] bg-surface rounded-[2rem] overflow-hidden relative mb-8 premium-shadow">
-<img alt="Cordyceps" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0ujtw6gDR_IjD08gieZvxUi_mydqsyuAkb0dK5e00NWV9w7XNH_Bpn2be1-GEjqWdo4_s_TLri-NrEwsy_CdcvXy20MBaF9yGr9JbnjaxNaVDQgCu98VIByeLZM3CMJFjhf0Adpg9irEQ17pxc0z4OW9L-GiLngH9Wfz_yUkq6vi7X57JVpOcd6c7ZLJR2ES2W5Hg7oNhVDdoUkNzzIISd8wvGceqjLgMsT_X3MnptBARsM_ZPT98K6i7oc"/>
-<div class="absolute top-6 right-6 bg-primary text-on-primary text-[9px] font-bold px-4 py-2 rounded-full uppercase tracking-widest">Phổ biến nhất</div>
-</div>
-<div class="space-y-3 px-2">
-<div class="flex justify-between items-end">
-<h3 class="text-2xl leading-none">Sức mạnh Cordyceps</h3>
-<span class="text-lg font-light text-clay-muted">1.250.000đ</span>
-</div>
-<p class="text-on-surface-variant text-sm font-light">Tối ưu hiệu suất và sức bền cả ngày.</p>
-<button class="w-full mt-6 bg-primary text-on-primary py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-tertiary-fixed hover:text-primary transition-all duration-500 hover-lift">Thêm vào giỏ hàng</button>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="group cursor-pointer reveal-element" style="transition-delay: 0.1s">
-<div class="aspect-[4/5] bg-surface rounded-[2rem] overflow-hidden relative mb-8 premium-shadow">
-<img alt="Lion's Mane" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0ugXVxjZhlY5kwRolp58KvskGgt47pv6_zFkDyqrNwEJzYq2VoaEFUOREzG2ikywOEKiscSj10WOCGDp1EVAM6cMvOee1P9qJh51bP1ITqzJDvQnsFX5o0W-h2-pCjiTR_cbpZ0mQqCaiOHXpHY3sGi8dCtqx79R-zecY3rFk8twVv0dloiLxjuLIpMJ0UgkBsiuEx0uDCjXVballkmAXsgDfk2LBiMwuYUIblbiRyVjVAPUkZ4cwj3KPLk"/>
-</div>
-<div class="space-y-3 px-2">
-<div class="flex justify-between items-end">
-<h3 class="text-2xl leading-none">Tập trung Hericium</h3>
-<span class="text-lg font-light text-clay-muted">1.150.000đ</span>
-</div>
-<p class="text-on-surface-variant text-sm font-light">Khai mở tiềm năng não bộ tối đa.</p>
-<button class="w-full mt-6 bg-primary text-on-primary py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-tertiary-fixed hover:text-primary transition-all duration-500 hover-lift">Thêm vào giỏ hàng</button>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="group cursor-pointer reveal-element" style="transition-delay: 0.2s">
-<div class="aspect-[4/5] bg-surface rounded-[2rem] overflow-hidden relative mb-8 premium-shadow">
-<img alt="Bundle" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110" src="https://lh3.googleusercontent.com/aida/ADBb0uhpsBO5aBDRbJaxL8872JNqRdG7J2i4PAsbj512rhIR-ex0_9ZW_CjsXKdVfE9dz20lRryFvMRbmFfGajh2NxwJOouqzoGWkbAKVKySRnYLZUkgQfbWxUIg1DvH2j46MuT-jr4k6vBBFR2xYq4YIRO_tZraxSxi-6D3qyIAqTLpc_0dZelOxxvgzbYJqnB25UO9Aw1fXoEuW9SjG6_0TGqbefk8FUxQxEjisMkwnZFUb_jQ30aYKerRzYU"/>
-</div>
-<div class="space-y-3 px-2">
-<div class="flex justify-between items-end">
-<h3 class="text-2xl leading-none">The Complete Kit</h3>
-<span class="text-lg font-light text-clay-muted">3.450.000đ</span>
-</div>
-<p class="text-on-surface-variant text-sm font-light">Giải pháp toàn diện cho cả ngày dài.</p>
-<button class="w-full mt-6 bg-primary text-on-primary py-5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-tertiary-fixed hover:text-primary transition-all duration-500 hover-lift">Thêm vào giỏ hàng</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Quality Commitment -->
-<section class="py-xl bg-forest-deep text-white" id="commitment">
-<div class="max-w-container-max mx-auto px-6 reveal-element">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-10">
-<h2 class="text-4xl md:text-6xl leading-tight">Cam kết <span class="italic opacity-80">chất lượng</span> tuyệt đối</h2>
-<div class="space-y-8">
-<div class="flex gap-6 items-start">
-<div class="bg-white/10 p-3 rounded-xl shrink-0">
-<span class="material-symbols-outlined text-3xl text-tertiary-fixed">verified</span>
-</div>
-<div>
-<h4 class="text-xl mb-2 font-medium">100% Quả thể nấm</h4>
-<p class="opacity-60 font-light leading-relaxed text-sm">Chúng tôi chỉ sử dụng quả thể nấm trưởng thành, nơi chứa hàm lượng dược chất cao nhất, không dùng hệ sợi nấm nuôi trên ngũ cốc.</p>
-</div>
-</div>
-<div class="flex gap-6 items-start">
-<div class="bg-white/10 p-3 rounded-xl shrink-0">
-<span class="material-symbols-outlined text-3xl text-tertiary-fixed">science</span>
-</div>
-<div>
-<h4 class="text-xl mb-2 font-medium">Dựa trên nền tảng khoa học</h4>
-<p class="opacity-60 font-light leading-relaxed text-sm">Công nghệ chiết xuất kép tiên tiến giúp tối ưu hóa khả năng hấp thụ của cơ thể đối với các hợp chất sinh học quý giá.</p>
-</div>
-</div>
-<div class="flex gap-6 items-start">
-<div class="bg-white/10 p-3 rounded-xl shrink-0">
-<span class="material-symbols-outlined text-3xl text-tertiary-fixed">public</span>
-</div>
-<div>
-<h4 class="text-xl mb-2 font-medium">Nuôi trồng tại Israel</h4>
-<p class="opacity-60 font-light leading-relaxed text-sm">Quy trình nuôi trồng nghiêm ngặt tại các trang trại hiện đại ở Israel, đảm bảo nguồn nguyên liệu tinh khiết và bền vững.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative">
-<div class="rounded-3xl overflow-hidden premium-shadow">
-<img alt="Lab testing" class="w-full h-auto" src="https://lh3.googleusercontent.com/aida/ADBb0uhXWZ1HT3Us0f4l-bJdVHUZjXoGJB_MjZNtomzl_viKtS3ls6O5--QMGNjk-PMlQ0OjB3_lI8PXPqiI9bFKsJj21NhwxKLoeMNkqXAuoLdqQaNaLYlOXaN6Yb12uZecBsY1Q-Wfa8wkWXoGiFBcLJWLqhD522eKNBA9eenpxiNPUywUr3KB1tuU4aX0ae-BF3tXQ3-_lvCfiY5oOkUdDwB47zs9lk1oGp1rk1ojy5GDug_VkCLiEDag9g"/>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-tertiary-fixed text-primary p-8 rounded-2xl hidden md:block">
-<p class="text-3xl font-headline-md leading-tight">Chất lượng<br/>không thỏa hiệp.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials -->
-<section class="py-xl bg-surface-container" id="community">
-<div class="max-w-container-max mx-auto px-6 reveal-element">
-<div class="text-center mb-16">
-<span class="text-[10px] font-bold uppercase tracking-[0.4em] text-clay-muted mb-4 block">Cộng đồng Mycospring</span>
-<h2 class="text-3xl md:text-5xl">Khách hàng nói gì về chúng tôi</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-background p-8 rounded-[2rem] space-y-5 premium-shadow">
-<div class="flex text-tertiary-fixed">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-<p class="text-lg font-light italic leading-relaxed">"Sản phẩm thực sự thay đổi buổi sáng của tôi. Sự tập trung đến rất tự nhiên mà không có cảm giác bồn chồn như cà phê."</p>
-<div>
-<p class="font-bold uppercase tracking-widest text-[9px]">- Minh Anh, Designer</p>
-</div>
-</div>
-<div class="bg-background p-8 rounded-[2rem] space-y-5 premium-shadow">
-<div class="flex text-tertiary-fixed">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-<p class="text-lg font-light italic leading-relaxed">"Reishi giúp tôi có giấc ngủ sâu hơn nhiều sau một ngày làm việc căng thẳng. Tôi cảm thấy hồi phục hoàn toàn vào sáng hôm sau."</p>
-<div>
-<p class="font-bold uppercase tracking-widest text-[9px]">- Hoàng Nam, Kỹ sư</p>
-</div>
-</div>
-<div class="bg-background p-8 rounded-[2rem] space-y-5 premium-shadow">
-<div class="flex text-tertiary-fixed">
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-<span class="material-symbols-outlined text-sm">star</span>
-</div>
-<p class="text-lg font-light italic leading-relaxed">"Đóng gói rất tinh tế và cao cấp. Chất lượng dịch vụ và sản phẩm đều vượt mong đợi của tôi."</p>
-<div>
-<p class="font-bold uppercase tracking-widest text-[9px]">- Thanh Thảo, Yoga Instructor</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Quiz CTA -->
-<section class="py-xl bg-primary text-on-primary relative overflow-hidden">
-<div class="absolute inset-0 opacity-20">
-<img alt="Texture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhAPV6_Or5ZpWtYilEK1V7t0XiM1kiGzrImFgee4uL7RTrVm4o7GrDROngh3-Gx89j2ZB0YyZ36OHaJwDT00P4htrJSlepuCg2glx8kak5_sctu-lpCoXby4Eif56R60l1w4dzsXKAlyDzwujHSNw2Lep9QB7ZSwlymslgBgwqLLLSpczt8PXcCJUaR_p8yidZKJuBdAifS4Y5j0KFH6F0TegsrfNPuJY8Dy5zFk0mkxhVlCXdI3Y-x598"/>
-</div>
-<div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-10 reveal-element">
-<h2 class="text-4xl md:text-7xl leading-tight tracking-tighter">Bắt đầu hành trình của riêng bạn</h2>
-<p class="text-lg md:text-xl opacity-80 font-light leading-relaxed">
-            Mỗi cơ thể là duy nhất. Hãy làm bài trắc nghiệm ngắn để tìm ra loại nấm dược liệu phù hợp nhất với nhu cầu sức khỏe hiện tại của bạn.
-        </p>
-<button class="bg-tertiary-fixed text-primary px-16 py-6 rounded-full text-xs font-bold uppercase tracking-[0.3em] hover:bg-white hover-lift">
-            LÀM BÀI TRẮC NGHIỆM NGAY
-        </button>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-background pt-xl pb-12 border-t border-primary/5">
-<div class="max-w-container-max mx-auto px-6">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20 reveal-element">
-<div class="space-y-8">
-<img alt="Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ugvSdJPHUisrZQ13wPfiHijHoD9w80XSrQSdGlegMqluEEIjVsfmxOSYe90QVEnd8rWD1XzgQvSXdxAhcSc0tAYOOp24E9ShlKRjrN0GjScILIV-iCjvXlkDlLXAdNs_DLKt9mOoOiJxtwVIvLbf0aP0qthFOmJ_q1DquNqnWFYbn8Uc2acMcXlghRporwaAgb46F5m_g9HQGwcPUud9EVmYRHpia3Ww_rVflvUtJOz_VAfi_2U3iLKUEs"/>
-<p class="text-sm font-light text-on-surface-variant leading-relaxed">
-                    Đơn vị tiên phong cung cấp tinh chất nấm dược liệu cao cấp tại Việt Nam. 100% tự nhiên, nuôi dưỡng sức khỏe từ gốc.
-                </p>
-<div class="flex gap-6">
-<a class="text-primary hover:text-clay-muted transition-colors" href="#"><span class="material-symbols-outlined text-xl">facebook</span></a>
-<a class="text-primary hover:text-clay-muted transition-colors" href="#"><span class="material-symbols-outlined text-xl">photo_camera</span></a>
-</div>
-</div>
-<div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-primary/40">Sản phẩm</h4>
-<ul class="space-y-4 text-sm font-light text-on-surface-variant">
-<li><a class="hover:text-primary transition-colors" href="#benefits">Nấm Bờm Sư Tử</a></li>
-<li><a class="hover:text-primary transition-colors" href="#benefits">Nấm Linh Chi</a></li>
-<li><a class="hover:text-primary transition-colors" href="#benefits">Đông Trùng Hạ Thảo</a></li>
-<li><a class="hover:text-primary transition-colors" href="#benefits">Nấm Vân Chi</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-primary/40">Thông tin</h4>
-<ul class="space-y-4 text-sm font-light text-on-surface-variant">
-<li><a class="hover:text-primary transition-colors" href="#commitment">Về Mycospring</a></li>
-<li><a class="hover:text-primary transition-colors" href="#how-to">Quy trình nuôi trồng</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Câu hỏi thường gặp</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-[10px] font-bold uppercase tracking-[0.3em] mb-10 text-primary/40">Bản tin</h4>
-<p class="text-sm font-light text-on-surface-variant mb-8">Nhận những nghiên cứu mới nhất và ưu đãi đặc quyền.</p>
-<form class="space-y-4">
-<input class="w-full bg-surface-container border-none rounded-full px-6 py-4 text-xs focus:ring-2 focus:ring-tertiary-fixed placeholder-primary/20" placeholder="Email của bạn" type="email"/>
-<button class="w-full bg-primary text-on-primary py-4 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:opacity-90 transition-opacity">Đăng ký tham gia</button>
-</form>
-</div>
-</div>
-<div class="pt-10 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-8">
-<p class="text-[9px] uppercase tracking-[0.3em] text-on-surface-variant/50 font-bold">© 2024 Mycospring. Nuôi dưỡng từ thiên nhiên.</p>
-<div class="flex gap-10 text-[9px] uppercase tracking-[0.3em] text-on-surface-variant/50 font-bold">
-<a class="hover:text-primary transition-colors" href="#">Điều khoản</a>
-<a class="hover:text-primary transition-colors" href="#">Hoàn trả</a>
-</div>
-</div>
-</div>
-</footer>
-<!-- Back to Top Button -->
-<button class="fixed bottom-32 right-10 bg-white text-primary w-14 h-14 rounded-full shadow-xl flex items-center justify-center z-50 hover-lift active:scale-95 border border-primary/5" id="back-to-top">
-<span class="material-symbols-outlined text-2xl">arrow_upward</span>
-</button>
-<!-- Floating Action Button (Support) -->
-<button class="fixed bottom-10 right-10 bg-tertiary-fixed text-primary w-16 h-16 rounded-full shadow-2xl flex items-center justify-center z-50 hover-lift active:scale-95 group">
-<span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">support_agent</span>
-</button>
-<script>
-    // Mobile Menu Functionality
-    const menuOpen = document.getElementById('mobile-menu-open');
-    const menuClose = document.getElementById('mobile-menu-close');
-    const menuCloseArea = document.getElementById('mobile-menu-close-area');
-    const menuOverlay = document.getElementById('mobile-menu-overlay');
-    const menuContent = document.getElementById('mobile-menu-content');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    function toggleMenu(show) {
-        if (show) {
-            menuOverlay.classList.remove('invisible', 'opacity-0');
-            menuOverlay.classList.add('visible', 'opacity-100');
-            menuContent.classList.remove('-translate-x-full');
-            document.body.style.overflow = 'hidden';
-        } else {
-            menuOverlay.classList.remove('opacity-100');
-            menuOverlay.classList.add('opacity-0');
-            menuContent.classList.add('-translate-x-full');
-            setTimeout(() => {
-                menuOverlay.classList.remove('visible');
-                menuOverlay.classList.add('invisible');
-                document.body.style.overflow = '';
-            }, 500);
-        }
+  <style>
+    :root {
+      --primary:          #17120d;
+      --primary-rgb:      23,18,13;
+      --on-primary:       #ffffff;
+      --background:       #fff8f3;
+      --surface:          #fff8f3;
+      --surface-container:#f5ece4;
+      --surface-low:      #fbf2e9;
+      --surface-variant:  #eae1d8;
+      --on-surface:       #1f1b16;
+      --on-surface-var:   #4d4540;
+      --outline-var:      #d0c4bd;
+      --clay:             #A67B5B;
+      --tertiary-fixed:   #dfec60;
+      --forest-deep:      #3E4437;
+      --cream-dark:       #EBE7E0;
+      --radius-pill:      9999px;
+      --radius-card:      2rem;
+      --radius-lg:        1.5rem;
     }
 
-    menuOpen.addEventListener('click', () => toggleMenu(true));
-    menuClose.addEventListener('click', () => toggleMenu(false));
-    menuCloseArea.addEventListener('click', () => toggleMenu(false));
-    mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+    /* ── Base ── */
+    body {
+      font-family: 'Open Sans', Arial, sans-serif;
+      background-color: var(--background);
+      color: var(--on-surface);
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
 
-    // Intersection Observer for Scroll Animations
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, { threshold: 0.15 });
+    /* ── Global link color reset (override Bootstrap blue) ── */
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: inherit; }
+    .btn-underline { color: var(--primary); }
+    .btn-underline:hover { color: var(--clay) !important; }
 
-    document.querySelectorAll('.reveal-element').forEach(el => revealObserver.observe(el));
+    /* ── Material icon helper ── */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
 
-    // Sticky Header and Back to Top Visibility
-    const backToTop = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('main-nav');
-        if (window.scrollY > 80) {
-            nav.classList.add('sticky-nav-scrolled');
-            nav.classList.remove('mt-10', 'md:mt-12');
-        } else {
-            nav.classList.remove('sticky-nav-scrolled');
-            nav.classList.add('mt-10', 'md:mt-12');
-        }
+    /* ── Promo bar ── */
+    .promo-bar {
+      background-color: var(--primary);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      padding: .65rem 0;
+      text-align: center;
+      position: relative;
+      z-index: 60;
+    }
 
-        if (window.scrollY > 500) {
-            backToTop.classList.add('visible');
-        } else {
-            backToTop.classList.remove('visible');
-        }
+    /* ── Navbar ── */
+    #main-nav {
+      background: transparent;
+      transition: background .4s ease, padding .4s ease, box-shadow .4s ease;
+      margin-top: 2.5rem;
+    }
+    #main-nav.scrolled {
+      background: rgba(255,248,243,.95) !important;
+      margin-top: 0 !important;
+      padding-top: .75rem !important;
+      padding-bottom: .75rem !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+    }
+    .navbar-brand img { height: 26px; }
+    .nav-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--primary);
+      text-decoration: none;
+      transition: opacity .3s;
+    }
+    .nav-label:hover { opacity: .55; color: var(--primary); }
+    .cart-badge {
+      position: absolute;
+      top: -6px; right: -8px;
+      background: var(--tertiary-fixed);
+      color: var(--primary);
+      font-size: 9px; font-weight: 700;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── Offcanvas mobile menu ── */
+    .offcanvas { max-width: 85%; background: var(--background); }
+    .offcanvas .nav-item-mobile {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 1.6rem;
+      color: var(--on-surface);
+      text-decoration: none;
+      transition: color .3s;
+    }
+    .offcanvas .nav-item-mobile:hover { color: var(--clay); }
+
+    /* ── Hero ── */
+    #hero {
+      min-height: 100vh;
+      background-color: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://lh3.googleusercontent.com/aida/ADBb0ugb6E-DFcem3ZH1Y-2Q-7mOaUeRTScbsTtdcarR1WdbyC1YnLgFQGPahjEBwyfEPzo3b1F5As27YNhQT-SelOpAf2cLrQk3ZC5vKou0mWeQMnV7VQNwqI8sOVP06KDzDMx5Lx-T9XFZAeaj5p5mOh4ZMjLgdyGU-HYMUoLSUChSe7HvagEy-VVCZRjmEo05FfwuN-bRm5Tb4VF9vzS3wssIW-wVXGnz-VuF-y9rJhOJNb8KGHOQptKf5pA');
+      background-size: cover; background-position: center;
+      opacity: .6;
+      animation: kenburns 20s ease-in-out infinite alternate;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(23,18,13,.4), transparent, rgba(23,18,13,.6));
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; color: #fff; }
+    .hero-h1 {
+      font-size: clamp(2.2rem, 7vw + .5rem, 7rem);
+      line-height: 1.05;
+    }
+    .hero-h1 .italic-light { font-style: italic; font-weight: 300; color: #ece0d8; }
+    .slide-up { animation: slideUp 1.2s cubic-bezier(.16,1,.3,1) forwards; opacity: 0; transform: translateY(30px); }
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+    @keyframes kenburns { 0% { transform: scale(1); } 100% { transform: scale(1.15); } }
+    .scroll-bounce { animation: bounce 2s infinite; }
+    @keyframes bounce {
+      0%,20%,50%,80%,100% { transform: translateY(0); }
+      40% { transform: translateY(-10px); }
+      60% { transform: translateY(-5px); }
+    }
+    .btn-lime {
+      background-color: var(--tertiary-fixed);
+      color: var(--primary);
+      border-radius: var(--radius-pill);
+      font-size: 11px; font-weight: 700; letter-spacing: .3em; text-transform: uppercase;
+      padding: 1.1rem 3.5rem;
+      border: none;
+      transition: background .3s, transform .3s, box-shadow .3s;
+    }
+    .btn-lime:hover { background: #fff; color: var(--primary); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.15); }
+
+    /* ── How to ── */
+    #how-to { background: var(--background); border-bottom: 1px solid rgba(23,18,13,.05); }
+    .step-icon {
+      width: 80px; height: 80px;
+      background: var(--surface-container);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2rem;
+      transition: background .5s;
+    }
+    .step-wrap:hover .step-icon { background: var(--tertiary-fixed); }
+    .divider-lime { width: 64px; height: 2px; background: var(--tertiary-fixed); margin: 1.5rem auto 0; }
+
+    /* ── Benefits ── */
+    #benefits { background: var(--surface-low); }
+    .benefit-row { min-height: 70vh; }
+    .benefit-img { object-fit: cover; width: 100%; height: 100%; min-height: 380px; }
+    .benefit-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .4em;
+      text-transform: uppercase; color: var(--clay);
+    }
+    .btn-underline {
+      font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+      border: none; background: none; padding: 0;
+      border-bottom: 2px solid var(--primary);
+      transition: color .3s;
+    }
+    .btn-underline:hover { color: var(--clay); }
+
+    /* ── Products ── */
+    #products { background: var(--background); }
+    .product-card { cursor: pointer; }
+    .product-img-wrap {
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 40px -10px rgba(23,18,13,.08);
+      transition: box-shadow .5s;
+    }
+    .product-img-wrap:hover { box-shadow: 0 30px 60px -12px rgba(23,18,13,.12); }
+    .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.5s; }
+    .product-card:hover .product-img-wrap img { transform: scale(1.08); }
+    .badge-popular {
+      position: absolute; top: 1.25rem; right: 1.25rem;
+      background: var(--primary); color: #fff;
+      font-size: 9px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+      padding: .4rem 1rem; border-radius: var(--radius-pill);
+    }
+    .product-name { font-size: 1.4rem; line-height: 1.1; }
+    .product-price { font-size: 1.1rem; font-weight: 300; color: var(--clay); }
+    .btn-dark-pill {
+      background: var(--primary); color: #fff;
+      border-radius: var(--radius-pill);
+      font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+      padding: 1rem; width: 100%; border: none;
+      transition: background .5s, color .5s, transform .3s;
+    }
+    .btn-dark-pill:hover { background: var(--tertiary-fixed); color: var(--primary); transform: translateY(-4px); }
+
+    /* ── Commitment ── */
+    #commitment { background: var(--forest-deep); color: #fff; }
+    .commitment-icon-wrap {
+      background: rgba(255,255,255,.1);
+      border-radius: 1rem;
+      width: 56px; height: 56px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .commitment-icon-wrap .material-symbols-outlined { color: var(--tertiary-fixed); font-size: 1.8rem; }
+    .commitment-img-wrap { border-radius: 1.5rem; overflow: hidden; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,.2); }
+    .commitment-tag-box {
+      position: absolute; bottom: -1.5rem; left: -1.5rem;
+      background: var(--tertiary-fixed); color: var(--primary);
+      padding: 1.5rem 2rem; border-radius: 1rem;
+      font-family: 'Open Sans', Arial, sans-serif; font-size: 1.25rem; line-height: 1.4;
+    }
+
+    /* ── Testimonials ── */
+    #community { background: var(--surface-container); }
+    .testimonial-card {
+      background: var(--background);
+      border-radius: var(--radius-card);
+      padding: 2rem;
+      box-shadow: 0 20px 40px -10px rgba(23,18,13,.08);
+    }
+    .star-icon { color: var(--tertiary-fixed); font-size: .9rem; }
+
+    /* ── Quiz CTA ── */
+    #quiz-cta {
+      background: var(--primary);
+      color: #fff;
+      position: relative; overflow: hidden;
+    }
+    .quiz-bg {
+      position: absolute; inset: 0;
+      background-image: url('https://lh3.googleusercontent.com/aida/ADBb0uhAPV6_Or5ZpWtYilEK1V7t0XiM1kiGzrImFgee4uL7RTrVm4o7GrDROngh3-Gx89j2ZB0YyZ36OHaJwDT00P4htrJSlepuCg2glx8kak5_sctu-lpCoXby4Eif56R60l1w4dzsXKAlyDzwujHSNw2Lep9QB7ZSwlymslgBgwqLLLSpczt8PXcCJUaR_p8yidZKJuBdAifS4Y5j0KFH6F0TegsrfNPuJY8Dy5zFk0mkxhVlCXdI3Y-x598');
+      background-size: cover; background-position: center; opacity: .2;
+    }
+
+    /* ── Footer ── */
+    footer { background: var(--background); border-top: 1px solid rgba(23,18,13,.05); }
+    .footer-heading {
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: .3em;
+      text-transform: uppercase; color: rgba(23,18,13,.4);
+      margin-bottom: 2rem;
+    }
+    .footer-link {
+      font-size: .875rem; font-weight: 300; color: var(--on-surface-var);
+      text-decoration: none; transition: color .3s; display: block; margin-bottom: .75rem;
+    }
+    .footer-link:hover { color: var(--primary); }
+    .footer-input {
+      background: var(--surface-container);
+      border: none; border-radius: var(--radius-pill);
+      padding: .85rem 1.5rem; font-size: .8rem; color: var(--on-surface);
+      width: 100%;
+      outline: none;
+    }
+    .footer-input::placeholder { color: rgba(23,18,13,.25); }
+    .footer-input:focus { box-shadow: 0 0 0 2px var(--tertiary-fixed); }
+    .btn-footer-sub {
+      background: var(--primary); color: #fff;
+      border: none; border-radius: var(--radius-pill);
+      font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+      padding: .9rem 1rem; width: 100%; margin-top: .75rem;
+      transition: opacity .3s;
+    }
+    .btn-footer-sub:hover { opacity: .85; }
+    .footer-copy {
+      font-size: 9px; font-weight: 700; letter-spacing: .3em;
+      text-transform: uppercase; color: rgba(79,68,60,.5);
+    }
+
+    /* ── Fixed buttons ── */
+    #back-to-top {
+      position: fixed; bottom: 8.5rem; right: 2.5rem; z-index: 50;
+      background: #fff; color: var(--primary);
+      width: 56px; height: 56px; border-radius: 50%;
+      border: 1px solid rgba(23,18,13,.08);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,.12);
+      opacity: 0; visibility: hidden;
+      transition: all .4s;
+    }
+    #back-to-top.visible { opacity: 1; visibility: visible; }
+    #back-to-top:hover { transform: translateY(-4px); }
+    #support-fab {
+      position: fixed; bottom: 2.5rem; right: 2.5rem; z-index: 50;
+      background: var(--tertiary-fixed); color: var(--primary);
+      width: 64px; height: 64px; border-radius: 50%;
+      border: none;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,.2);
+      transition: transform .3s;
+    }
+    #support-fab:hover { transform: translateY(-4px); }
+    #support-fab .material-symbols-outlined { font-size: 1.8rem; transition: transform .3s; }
+    #support-fab:hover .material-symbols-outlined { transform: rotate(12deg); }
+
+    /* ── Reveal animation ── */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(.16,1,.3,1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+
+    /* ── Hover lift ── */
+    .hover-lift { transition: transform .3s ease, box-shadow .3s ease; }
+    .hover-lift:hover { transform: translateY(-6px); }
+
+    /* ── Responsive tweaks ── */
+    @media (max-width: 991.98px) {
+      .commitment-tag-box { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Promo Bar -->
+<div class="promo-bar">
+  MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC CHO ĐƠN HÀNG TRÊN 1.500.000 VNĐ
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md fixed-top px-4 px-md-5 py-4" id="main-nav">
+  <!-- Mobile toggle -->
+  <button class="navbar-toggler border-0 text-dark p-0 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+
+  <!-- Desktop links left -->
+  <div class="collapse navbar-collapse" id="navbarLinks">
+    <ul class="navbar-nav gap-4 me-auto">
+      <li class="nav-item"><a class="nav-label" href="#products">Cửa hàng</a></li>
+      <li class="nav-item"><a class="nav-label" href="#benefits">Về loài nấm</a></li>
+      <li class="nav-item"><a class="nav-label" href="#commitment">Câu chuyện</a></li>
+      <li class="nav-item"><a class="nav-label" href="#commitment">Nghiên cứu</a></li>
+    </ul>
+  </div>
+
+  <!-- Logo centered -->
+  <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">
+    <img src="https://lh3.googleusercontent.com/aida/ADBb0ugvSdJPHUisrZQ13wPfiHijHoD9w80XSrQSdGlegMqluEEIjVsfmxOSYe90QVEnd8rWD1XzgQvSXdxAhcSc0tAYOOp24E9ShlKRjrN0GjScILIV-iCjvXlkDlLXAdNs_DLKt9mOoOiJxtwVIvLbf0aP0qthFOmJ_q1DquNqnWFYbn8Uc2acMcXlghRporwaAgb46F5m_g9HQGwcPUud9EVmYRHpia3Ww_rVflvUtJOz_VAfi_2U3iLKUEs" alt="Mycospring" />
+  </a>
+
+  <!-- Icons right -->
+  <div class="ms-auto d-flex align-items-center gap-3">
+    <button class="btn p-0 text-dark d-none d-md-block">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+    <button class="btn p-0 text-dark position-relative">
+      <span class="material-symbols-outlined">shopping_bag</span>
+      <span class="cart-badge">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-body d-flex flex-column p-5 p-md-5 py-5">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <img src="https://lh3.googleusercontent.com/aida/ADBb0ugvSdJPHUisrZQ13wPfiHijHoD9w80XSrQSdGlegMqluEEIjVsfmxOSYe90QVEnd8rWD1XzgQvSXdxAhcSc0tAYOOp24E9ShlKRjrN0GjScILIV-iCjvXlkDlLXAdNs_DLKt9mOoOiJxtwVIvLbf0aP0qthFOmJ_q1DquNqnWFYbn8Uc2acMcXlghRporwaAgb46F5m_g9HQGwcPUud9EVmYRHpia3Ww_rVflvUtJOz_VAfi_2U3iLKUEs" alt="Logo" style="height:24px"/>
+      <button class="btn p-0" data-bs-dismiss="offcanvas"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <nav class="d-flex flex-column gap-4 mb-auto">
+      <a class="nav-item-mobile" href="#products" data-bs-dismiss="offcanvas">Cửa hàng</a>
+      <a class="nav-item-mobile" href="#benefits" data-bs-dismiss="offcanvas">Về loài nấm</a>
+      <a class="nav-item-mobile" href="#commitment" data-bs-dismiss="offcanvas">Câu chuyện</a>
+      <a class="nav-item-mobile" href="#commitment" data-bs-dismiss="offcanvas">Nghiên cứu</a>
+    </nav>
+    <div class="mt-5 pt-4 border-top" style="border-color:rgba(23,18,13,.1)!important">
+      <p class="footer-copy mb-3">Tài khoản</p>
+      <button class="btn-dark-pill hover-lift">Đăng nhập</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container px-4">
+    <h1 class="hero-h1 mb-4 slide-up" style="animation-delay:.2s">
+      Nấm cho <br/><span class="italic-light">cuộc sống</span>.
+    </h1>
+    <p class="fs-5 fw-light mx-auto mb-5 slide-up" style="max-width:520px;opacity:.9;line-height:1.7;animation-delay:.5s">
+      Thói quen dựa trên nấm dược liệu có thể thay đổi cách bạn ngủ, hoạt động và cảm nhận mỗi ngày.
+    </p>
+    <div class="d-flex flex-column align-items-center gap-4 slide-up" style="animation-delay:.8s">
+      <a href="#products" class="btn-lime hover-lift">BẮT ĐẦU NGAY</a>
+      <div class="scroll-bounce"><span class="material-symbols-outlined" style="color:rgba(255,255,255,.5);font-size:2rem">expand_more</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW TO ── -->
+<section id="how-to" class="py-5" style="padding-top:6rem!important;padding-bottom:6rem!important">
+  <div class="container reveal">
+    <div class="text-center mb-5">
+      <span class="benefit-tag d-block mb-3">Quy trình đơn giản</span>
+      <h2 class="fs-1">Cách sử dụng</h2>
+      <div class="divider-lime"></div>
+    </div>
+    <div class="row g-5 justify-content-center text-center">
+      <div class="col-12 col-md-4 step-wrap">
+        <div class="step-icon"><span class="material-symbols-outlined" style="color:var(--primary)">coffee</span></div>
+        <h3 class="fs-5 text-uppercase fw-semibold" style="letter-spacing:-.02em">1. Pha trộn</h3>
+        <p class="text-muted fw-light px-3" style="font-size:.9rem;line-height:1.7">Thêm 1–2 giọt tinh chất vào cà phê, trà hoặc sinh tố yêu thích của bạn.</p>
+      </div>
+      <div class="col-12 col-md-4 step-wrap">
+        <div class="step-icon"><span class="material-symbols-outlined" style="color:var(--primary)">reorder</span></div>
+        <h3 class="fs-5 text-uppercase fw-semibold" style="letter-spacing:-.02em">2. Khuấy đều</h3>
+        <p class="text-muted fw-light px-3" style="font-size:.9rem;line-height:1.7">Khuấy tan tinh chất nấm dược liệu để các hoạt chất hòa quyện hoàn hảo.</p>
+      </div>
+      <div class="col-12 col-md-4 step-wrap">
+        <div class="step-icon"><span class="material-symbols-outlined" style="color:var(--primary)">energy_savings_leaf</span></div>
+        <h3 class="fs-5 text-uppercase fw-semibold" style="letter-spacing:-.02em">3. Thưởng thức</h3>
+        <p class="text-muted fw-light px-3" style="font-size:.9rem;line-height:1.7">Cảm nhận nguồn năng lượng tự nhiên và sự minh mẫn lan tỏa khắp cơ thể.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BENEFITS ── -->
+<section id="benefits">
+
+  <!-- Benefit 1 -->
+  <div class="row g-0 align-items-center benefit-row">
+    <div class="col-12 col-lg-6 p-5 p-md-5 reveal" style="padding:5rem!important">
+      <span class="benefit-tag d-block mb-3">Tập trung &amp; Tinh anh</span>
+      <h2 class="display-6 mb-4" style="line-height:1.2">Nấm Bờm Sư Tử<br/>(Hericium)</h2>
+      <p class="fw-light mb-4" style="color:var(--on-surface-var);font-size:1.1rem;line-height:1.8">
+        Được mệnh danh là "Nấm Thông Minh", Hericium hỗ trợ tối ưu cho sức khỏe não bộ, tăng cường trí nhớ và khả năng tập trung cao độ cho công việc sáng tạo.
+      </p>
+      <button class="btn-underline">Khám phá chi tiết</button>
+    </div>
+    <div class="col-12 col-lg-6" style="min-height:400px">
+      <img src="https://lh3.googleusercontent.com/aida/ADBb0ugezCilZxaIAIXo7WJTXDwOrbAGYly26vAn2Q7W98S6IJM4tY4AcVxfTuGZ-k9U0BEVd5r2lshe6qsDVz3rSf8MQzVjc7An3A04BN5Ml5JTaXj163Y5j9gidFgtFlBBm8G7X1DJ_PIQQVkl6n19q3F3NG47L-wX-mwqYx-tmXHBMGthtNgZD8jLXPMaUo7VIbv3MD-5_HqUZJbm8m1YNEk00mQHNMJ7GtcDczs9mkM-5WyC37XEoSx5bFk" alt="Hericium Focus" class="benefit-img"/>
+    </div>
+  </div>
+
+  <!-- Benefit 2 -->
+  <div class="row g-0 align-items-center benefit-row">
+    <div class="col-12 col-lg-6 order-2 order-lg-1" style="min-height:400px">
+      <img src="https://lh3.googleusercontent.com/aida/ADBb0ujMTS-CSuzkUY8jIEQZVT82XqEO7s7w9H5oAug8DUVlTaedTf2obbRyMD2e_mH3tPBzXG2desZAJ_n7sBER2GGguePHj79yJwLe3JSf8wC98soNvR_fInxjvAlFiDmmdST_2izaHB50qGDuim4kVy3PmiPqcoi5z-eYGbLFzZjl2XuD68o00xK7E9NUN6FX2EoH6JEpfdxuyuRvZCpj1zkxJOwZ4y4BjLNV3PLhnu9L4_vEcEoB0xg2Ww" alt="Cordyceps Energy" class="benefit-img"/>
+    </div>
+    <div class="col-12 col-lg-6 order-1 order-lg-2 reveal" style="padding:5rem!important">
+      <span class="benefit-tag d-block mb-3">Năng lượng bền bỉ</span>
+      <h2 class="display-6 mb-4" style="line-height:1.2">Đông Trùng Hạ Thảo<br/>(Cordyceps)</h2>
+      <p class="fw-light mb-4" style="color:var(--on-surface-var);font-size:1.1rem;line-height:1.8">
+        Tăng cường hiệu suất vận động và sức bền tự nhiên. Cordyceps giúp cơ thể tối ưu hóa việc sử dụng oxy, mang lại nguồn năng lượng sạch mà không gây hồi hộp.
+      </p>
+      <button class="btn-underline">Khám phá chi tiết</button>
+    </div>
+  </div>
+
+  <!-- Benefit 3 -->
+  <div class="row g-0 align-items-center benefit-row">
+    <div class="col-12 col-lg-6 reveal" style="padding:5rem!important">
+      <span class="benefit-tag d-block mb-3">Thư giãn &amp; Phục hồi</span>
+      <h2 class="display-6 mb-4" style="line-height:1.2">Nấm Linh Chi<br/>(Reishi)</h2>
+      <p class="fw-light mb-4" style="color:var(--on-surface-var);font-size:1.1rem;line-height:1.8">
+        "Vua của các loài thảo mộc", Linh Chi giúp cân bằng tâm trí, hỗ trợ giấc ngủ sâu và tăng cường hệ thống miễn dịch tự nhiên của bạn.
+      </p>
+      <button class="btn-underline">Khám phá chi tiết</button>
+    </div>
+    <div class="col-12 col-lg-6" style="min-height:400px">
+      <img src="https://lh3.googleusercontent.com/aida/ADBb0uhUjMujnTXBLbGdWqFuzijSytvMU-dYx1CTJT-uZlPLlpB81xP-tq-Ku71khx3Nn1myFLCzFlpMx-V2oYQZ3LFKyC8aBCqfKiVsTBkIdizf1QwSAXOhfq0GZEunI7ZN4vt5OH7X3VQw9NSaEeVhTVxHS9qlkNMLrdbifmRTxCcgcepJE-RCB55upRMlt5OioKbh7VsbzvAwpHrZNUmKepcfSDTnzUWwQUnKDWxzZC_CfpztrzPD6nL7I10" alt="Reishi Calm" class="benefit-img"/>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTS ── -->
+<section id="products" class="py-5" style="padding-top:6rem!important;padding-bottom:6rem!important">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-baseline mb-5 gap-3">
+      <h2 style="font-size:clamp(2rem,5vw,4rem);letter-spacing:-.03em">Chọn nấm của bạn</h2>
+      <a href="#" class="btn-underline">Xem bộ sưu tập đầy đủ</a>
+    </div>
+    <div class="row g-4">
+
+      <!-- Product 1 -->
+      <div class="col-12 col-md-4 reveal">
+        <div class="product-card">
+          <div class="product-img-wrap mb-4">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0ujtw6gDR_IjD08gieZvxUi_mydqsyuAkb0dK5e00NWV9w7XNH_Bpn2be1-GEjqWdo4_s_TLri-NrEwsy_CdcvXy20MBaF9yGr9JbnjaxNaVDQgCu98VIByeLZM3CMJFjhf0Adpg9irEQ17pxc0z4OW9L-GiLngH9Wfz_yUkq6vi7X57JVpOcd6c7ZLJR2ES2W5Hg7oNhVDdoUkNzzIISd8wvGceqjLgMsT_X3MnptBARsM_ZPT98K6i7oc" alt="Cordyceps"/>
+            <span class="badge-popular">Phổ biến nhất</span>
+          </div>
+          <div class="px-2">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <h3 class="product-name">Sức mạnh Cordyceps</h3>
+              <span class="product-price">1.250.000đ</span>
+            </div>
+            <p class="fw-light mb-4" style="font-size:.88rem;color:var(--on-surface-var)">Tối ưu hiệu suất và sức bền cả ngày.</p>
+            <button class="btn-dark-pill hover-lift">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-12 col-md-4 reveal" style="transition-delay:.1s">
+        <div class="product-card">
+          <div class="product-img-wrap mb-4">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0ugXVxjZhlY5kwRolp58KvskGgt47pv6_zFkDyqrNwEJzYq2VoaEFUOREzG2ikywOEKiscSj10WOCGDp1EVAM6cMvOee1P9qJh51bP1ITqzJDvQnsFX5o0W-h2-pCjiTR_cbpZ0mQqCaiOHXpHY3sGi8dCtqx79R-zecY3rFk8twVv0dloiLxjuLIpMJ0UgkBsiuEx0uDCjXVballkmAXsgDfk2LBiMwuYUIblbiRyVjVAPUkZ4cwj3KPLk" alt="Lion's Mane"/>
+          </div>
+          <div class="px-2">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <h3 class="product-name">Tập trung Hericium</h3>
+              <span class="product-price">1.150.000đ</span>
+            </div>
+            <p class="fw-light mb-4" style="font-size:.88rem;color:var(--on-surface-var)">Khai mở tiềm năng não bộ tối đa.</p>
+            <button class="btn-dark-pill hover-lift">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-12 col-md-4 reveal" style="transition-delay:.2s">
+        <div class="product-card">
+          <div class="product-img-wrap mb-4">
+            <img src="https://lh3.googleusercontent.com/aida/ADBb0uhpsBO5aBDRbJaxL8872JNqRdG7J2i4PAsbj512rhIR-ex0_9ZW_CjsXKdVfE9dz20lRryFvMRbmFfGajh2NxwJOouqzoGWkbAKVKySRnYLZUkgQfbWxUIg1DvH2j46MuT-jr4k6vBBFR2xYq4YIRO_tZraxSxi-6D3qyIAqTLpc_0dZelOxxvgzbYJqnB25UO9Aw1fXoEuW9SjG6_0TGqbefk8FUxQxEjisMkwnZFUb_jQ30aYKerRzYU" alt="Bundle"/>
+          </div>
+          <div class="px-2">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <h3 class="product-name">The Complete Kit</h3>
+              <span class="product-price">3.450.000đ</span>
+            </div>
+            <p class="fw-light mb-4" style="font-size:.88rem;color:var(--on-surface-var)">Giải pháp toàn diện cho cả ngày dài.</p>
+            <button class="btn-dark-pill hover-lift">Thêm vào giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COMMITMENT ── -->
+<section id="commitment" class="py-5" style="padding-top:6rem!important;padding-bottom:6rem!important">
+  <div class="container reveal">
+    <div class="row g-5 align-items-center">
+      <div class="col-12 col-lg-6">
+        <h2 class="display-5 mb-5" style="line-height:1.2">
+          Cam kết <em style="opacity:.8">chất lượng</em> tuyệt đối
+        </h2>
+        <div class="d-flex flex-column gap-4">
+          <div class="d-flex gap-4 align-items-start">
+            <div class="commitment-icon-wrap"><span class="material-symbols-outlined">verified</span></div>
+            <div>
+              <h4 class="fs-5 mb-2 fw-medium">100% Quả thể nấm</h4>
+              <p class="fw-light mb-0" style="opacity:.6;font-size:.9rem;line-height:1.7">Chúng tôi chỉ sử dụng quả thể nấm trưởng thành, nơi chứa hàm lượng dược chất cao nhất, không dùng hệ sợi nấm nuôi trên ngũ cốc.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-4 align-items-start">
+            <div class="commitment-icon-wrap"><span class="material-symbols-outlined">science</span></div>
+            <div>
+              <h4 class="fs-5 mb-2 fw-medium">Dựa trên nền tảng khoa học</h4>
+              <p class="fw-light mb-0" style="opacity:.6;font-size:.9rem;line-height:1.7">Công nghệ chiết xuất kép tiên tiến giúp tối ưu hóa khả năng hấp thụ của cơ thể đối với các hợp chất sinh học quý giá.</p>
+            </div>
+          </div>
+          <div class="d-flex gap-4 align-items-start">
+            <div class="commitment-icon-wrap"><span class="material-symbols-outlined">public</span></div>
+            <div>
+              <h4 class="fs-5 mb-2 fw-medium">Nuôi trồng tại Israel</h4>
+              <p class="fw-light mb-0" style="opacity:.6;font-size:.9rem;line-height:1.7">Quy trình nuôi trồng nghiêm ngặt tại các trang trại hiện đại ở Israel, đảm bảo nguồn nguyên liệu tinh khiết và bền vững.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="commitment-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida/ADBb0uhXWZ1HT3Us0f4l-bJdVHUZjXoGJB_MjZNtomzl_viKtS3ls6O5--QMGNjk-PMlQ0OjB3_lI8PXPqiI9bFKsJj21NhwxKLoeMNkqXAuoLdqQaNaLYlOXaN6Yb12uZecBsY1Q-Wfa8wkWXoGiFBcLJWLqhD522eKNBA9eenpxiNPUywUr3KB1tuU4aX0ae-BF3tXQ3-_lvCfiY5oOkUdDwB47zs9lk1oGp1rk1ojy5GDug_VkCLiEDag9g" alt="Lab testing" class="img-fluid w-100"/>
+          <div class="commitment-tag-box d-none d-md-block">
+            Chất lượng<br/>không thỏa hiệp.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="community" class="py-5" style="padding-top:6rem!important;padding-bottom:6rem!important">
+  <div class="container reveal">
+    <div class="text-center mb-5">
+      <span class="benefit-tag d-block mb-3">Cộng đồng Mycospring</span>
+      <h2 class="fs-1">Khách hàng nói gì về chúng tôi</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="testimonial-card h-100">
+          <div class="d-flex gap-1 mb-3">
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+          </div>
+          <p class="fst-italic fw-light mb-4" style="font-size:1.05rem;line-height:1.75">"Sản phẩm thực sự thay đổi buổi sáng của tôi. Sự tập trung đến rất tự nhiên mà không có cảm giác bồn chồn như cà phê."</p>
+          <p class="footer-copy mb-0">— Minh Anh, Designer</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="testimonial-card h-100">
+          <div class="d-flex gap-1 mb-3">
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+          </div>
+          <p class="fst-italic fw-light mb-4" style="font-size:1.05rem;line-height:1.75">"Reishi giúp tôi có giấc ngủ sâu hơn nhiều sau một ngày làm việc căng thẳng. Tôi cảm thấy hồi phục hoàn toàn vào sáng hôm sau."</p>
+          <p class="footer-copy mb-0">— Hoàng Nam, Kỹ sư</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="testimonial-card h-100">
+          <div class="d-flex gap-1 mb-3">
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+            <span class="material-symbols-outlined star-icon">star</span>
+          </div>
+          <p class="fst-italic fw-light mb-4" style="font-size:1.05rem;line-height:1.75">"Đóng gói rất tinh tế và cao cấp. Chất lượng dịch vụ và sản phẩm đều vượt mong đợi của tôi."</p>
+          <p class="footer-copy mb-0">— Thanh Thảo, Yoga Instructor</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUIZ CTA ── -->
+<section id="quiz-cta" class="py-5" style="padding-top:6rem!important;padding-bottom:6rem!important">
+  <div class="quiz-bg"></div>
+  <div class="container position-relative text-center reveal" style="max-width:900px">
+    <h2 class="mb-4" style="font-size:clamp(2rem,6vw,5rem);line-height:1.1;letter-spacing:-.02em">
+      Bắt đầu hành trình của riêng bạn
+    </h2>
+    <p class="fw-light mb-5 mx-auto" style="opacity:.8;font-size:1.1rem;line-height:1.7;max-width:560px">
+      Mỗi cơ thể là duy nhất. Hãy làm bài trắc nghiệm ngắn để tìm ra loại nấm dược liệu phù hợp nhất với nhu cầu sức khỏe hiện tại của bạn.
+    </p>
+    <button class="btn-lime hover-lift">LÀM BÀI TRẮC NGHIỆM NGAY</button>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="pt-5 pb-4">
+  <div class="container">
+    <div class="row g-5 mb-5 reveal">
+      <!-- Brand -->
+      <div class="col-12 col-lg-3">
+        <img src="https://lh3.googleusercontent.com/aida/ADBb0ugvSdJPHUisrZQ13wPfiHijHoD9w80XSrQSdGlegMqluEEIjVsfmxOSYe90QVEnd8rWD1XzgQvSXdxAhcSc0tAYOOp24E9ShlKRjrN0GjScILIV-iCjvXlkDlLXAdNs_DLKt9mOoOiJxtwVIvLbf0aP0qthFOmJ_q1DquNqnWFYbn8Uc2acMcXlghRporwaAgb46F5m_g9HQGwcPUud9EVmYRHpia3Ww_rVflvUtJOz_VAfi_2U3iLKUEs" alt="Logo" style="height:22px" class="mb-4 d-block"/>
+        <p class="fw-light mb-4" style="font-size:.875rem;color:var(--on-surface-var);line-height:1.7">
+          Đơn vị tiên phong cung cấp tinh chất nấm dược liệu cao cấp tại Việt Nam. 100% tự nhiên, nuôi dưỡng sức khỏe từ gốc.
+        </p>
+        <div class="d-flex gap-3">
+          <a href="#" style="color:var(--primary);transition:color .3s" onmouseenter="this.style.color='var(--clay)'" onmouseleave="this.style.color='var(--primary)'">
+            <span class="material-symbols-outlined">facebook</span>
+          </a>
+          <a href="#" style="color:var(--primary);transition:color .3s" onmouseenter="this.style.color='var(--clay)'" onmouseleave="this.style.color='var(--primary)'">
+            <span class="material-symbols-outlined">photo_camera</span>
+          </a>
+        </div>
+      </div>
+      <!-- Products -->
+      <div class="col-6 col-lg-2">
+        <p class="footer-heading">Sản phẩm</p>
+        <a class="footer-link" href="#benefits">Nấm Bờm Sư Tử</a>
+        <a class="footer-link" href="#benefits">Nấm Linh Chi</a>
+        <a class="footer-link" href="#benefits">Đông Trùng Hạ Thảo</a>
+        <a class="footer-link" href="#benefits">Nấm Vân Chi</a>
+      </div>
+      <!-- Info -->
+      <div class="col-6 col-lg-2">
+        <p class="footer-heading">Thông tin</p>
+        <a class="footer-link" href="#commitment">Về Mycospring</a>
+        <a class="footer-link" href="#how-to">Quy trình nuôi trồng</a>
+        <a class="footer-link" href="#">Câu hỏi thường gặp</a>
+        <a class="footer-link" href="#">Chính sách bảo mật</a>
+      </div>
+      <!-- Newsletter -->
+      <div class="col-12 col-lg-4">
+        <p class="footer-heading">Bản tin</p>
+        <p class="fw-light mb-3" style="font-size:.875rem;color:var(--on-surface-var)">Nhận những nghiên cứu mới nhất và ưu đãi đặc quyền.</p>
+        <input class="footer-input mb-2" type="email" placeholder="Email của bạn"/>
+        <button class="btn-footer-sub">Đăng ký tham gia</button>
+      </div>
+    </div>
+
+    <div class="pt-4 border-top d-flex flex-column flex-md-row justify-content-between align-items-center gap-3" style="border-color:rgba(23,18,13,.05)!important">
+      <p class="footer-copy mb-0">© 2024 Mycospring. Nuôi dưỡng từ thiên nhiên.</p>
+      <div class="d-flex gap-4">
+        <a href="#" class="footer-copy text-decoration-none">Điều khoản</a>
+        <a href="#" class="footer-copy text-decoration-none">Hoàn trả</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<!-- Support FAB -->
+<button id="support-fab">
+  <span class="material-symbols-outlined">support_agent</span>
+</button>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Sticky navbar
+  const nav = document.getElementById('main-nav');
+  const btt = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      nav.classList.add('scrolled');
+      btt.classList.add('visible');
+    } else {
+      nav.classList.remove('scrolled');
+      btt.classList.remove('visible');
+    }
+    // Parallax hero title
+    const h1 = document.querySelector('.hero-h1');
+    if (h1) h1.style.transform = `translateY(${window.scrollY * .18}px)`;
+  });
+
+  // Reveal on scroll
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+  }, { threshold: 0, rootMargin: "0px 0px -60px 0px" });
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+      }
     });
-
-    // Scroll to top behavior
-    backToTop.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Subtle Parallax / Ken Burns sync
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const heroText = document.querySelector('h1.slide-up-fade');
-        if (heroText) {
-            heroText.style.transform = `translateY(${scrolled * 0.2}px)`;
-        }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            const target = document.querySelector(targetId);
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+  });
 </script>
-</body></html>
+</body>
+</html>
